@@ -1,0 +1,22 @@
+version: '3.0'
+
+services:
+  golang:
+    image: golang-greeting-api/golang:latest
+    build: 
+      context: .
+      dockerfile: docker/golang/Dockerfile
+    container_name: golang-greeting-api-container-golang
+    environment:
+      TZ: Asia/Tokyo
+      CGO_ENABLED: "0"
+      GOOS: linux
+      GOARCH: amd64
+    ports:
+      - "4000:4000"
+    networks:
+      - default
+    volumes:
+      - .:/app:rw
+    working_dir: /app
+    tty: true
