@@ -6,7 +6,7 @@ services:
     build: 
       context: .
       dockerfile: docker/golang/Dockerfile
-    container_name: golang-greeting-api-container-golang
+    container_name: golang-greeting-api-container
     environment:
       TZ: Asia/Tokyo
       CGO_ENABLED: "0"
@@ -20,3 +20,7 @@ services:
       - .:/app:rw
     working_dir: /app
     tty: true
+
+networks:
+  default:
+    name: golang-greeting-api-network-default
