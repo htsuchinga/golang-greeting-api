@@ -16,8 +16,8 @@ These instructions will help you set up the project on your local machine.
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-api-project.git
-    cd your-api-project
+    git clone https://github.com/htsuchinga/golang-greeting-api.git
+    cd golang-greeting-api
     ```
 
 2. Run the API server using docker-compose commands
